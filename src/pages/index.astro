@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+import ucfImg from "../_image/UCF.webp"
+import fullstackicon from "../_image/test2.webp"
+import wendysLogo from "../_image/Wendys-Logo.png"
+import emptyImg from "../_image/empty.webp"
+import asmImg from "../_image/asmImg.jpeg"
+import nanoLogo from "../_image/nanoxd.webp"
+---
+ 
+
+<BaseLayout sideBarActiveItemID="home">
+
+  <div class="pb-12 mt-5">
+    <div class="text-xl py-1">Hello 👋</div>
+    <div class="text-5xl font-bold">I'm Christopher Januario</div>
+    <div class="text-3xl py-3 font-bold">Software Engineer and Mathematician</div>
+    <div class="py-2 grid">
+      <text class="text-lg">
+        Welcome to my <b>Blazingly Fast🔥</b> portfolio.
+      </text>
+    </div>
+    <div class="mt-8">
+      <a class="btn" href="https://twitter.com/manuelernestog" target="_blank"> Let's connect!</a>
+      <a href="https://github.com/manuelernestog/astrofy" target="_blank" class="btn btn-outline ml-5">
+        Get This template
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">Education 🏫</div>
+  </div>
+
+  <HorizontalCard
+    title = "Bachelor of Science"
+    date="University of Central Florida"
+    badge = "2022 - 2026 (expected)"
+    img={ucfImg}
+    desc={["Double Major: Computer Science and Mathematics", "Minor: Physics"]}
+    url="#"
+  />
+
+  <div>
+    <div class="text-3xl w-full pt-6 font-bold mb-2">Experience 💪🧑‍💼</div>
+  </div>
+
+  <HorizontalCard
+    title="Full-Stack Developer"
+    date="SCI Solutions, LLC"
+    img={fullstackicon}
+    desc= {["• Converted legacy PHP website to React with TypeScript",
+    "• Created CRUD API using Express in Next.js App Router to manage production DB",
+    "• Designed and styled components using Radix-UI and TailwindCSS",
+    "• Working in Trello using Agile SCRUM methodology"]}
+    url="#"
+    badge="08/2023 - Present"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Shift Manager"
+    date="Wendy's (Orlando, FL)"
+    img={wendysLogo}
+    desc={["• Worked nearly 40 hours per week",
+    "• Received ServSafe Certification, responsible for health of customers",
+    "• Managed Inventory and Waste by logging and creating sales forecasts",
+    "• Responsible for all store-related problems: technological, mechanical, and social"]}
+    url="#"
+    badge="08/2022 - 12/2022"
+  />
+  <HorizontalCard 
+    title="Team Trainer"
+    date="Wendy's (Weston, FL)"
+    img = {emptyImg}
+    desc={["• Worked 30+ hours per week",
+    "• Responsible for correctly processing orders, money, and speed of service",
+    "• Implemented weekly systems for sanitation and inventory. Delegated tasks to crew"]}
+    badge="02/2022 - 08/2022"
+    url="#"
+  />
+
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Substitute Music Teacher"
+    date="ASM Music Schools"
+    img={asmImg}
+    desc={["• Taught for Eloy Oliveros, a Cuban Latin Percussionist",
+    "• Motivated and trained students K-12",
+    "• Designed plans and assigned homework based on students’ progress"]}    
+    url="#"
+    badge="02/2021 - 06/2022"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="UI/eCommerce Developer"
+    date="NanoXD International"
+    img={nanoLogo}
+    desc={["• Designed User Interface and content display",
+    "• Responsible for the pages of production eCommerce site",
+    "• Built and styled the UI in WordPress"]}    
+    url="#"
+    badge="02/2021 - 06/2022"
+  />
+
+  <div>
+    <div class="text-3xl w-full font-bold mb-2">Projects 🎨</div>
+  </div>
+</BaseLayout>

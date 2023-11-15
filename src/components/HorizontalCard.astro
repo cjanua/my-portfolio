@@ -1,0 +1,62 @@
+---
+const { title, img, url, badge, tags, target, date = "_blank", desc = [] } = Astro.props;
+import { Image } from "astro:assets";
+export const prerender = true;
+const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
+---
+
+<div
+  class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
+>
+  <a href={url} target={target}>
+    <div class="hero-content flex-col md:flex-row">
+      {
+        img != "_blank" ? (
+          <Image 
+            src={img}
+            width={750}
+            height={422}
+            alt={date}
+            loading = "eager"
+            class="max-w-full md:max-w-[13rem] rounded-lg"
+          />
+        ) : <></>
+      }
+      <div class="grow w-full">
+        <div class="grid grid-flow-col justify-between">
+          <div class="grid grid-flow-col justify-between gap-2">
+            <h1 class="text-xl font-bold">{title}</h1>
+            {date != "_blank" ? <h2 class="text-xl">- {date}</h2> : <></>}
+          </div>    
+          <div class="">
+            {badge && <div class="badge badge-secondary rounded-md shadow-xl text-m mx-2">{badge}</div>}
+          </div>
+          
+        </div>
+
+        <ul class="py-1 pl-2 text-1xl">{
+          () => {
+            try {
+              return desc.map((d) => (
+                <li>{d}</li>
+              ))
+            } catch (e) {
+              return <></>
+            }
+          }
+        }
+        </ul>
+        <div class="card-actions justify-end">
+          {
+            tags &&
+              tags.map((tag) => (
+                <a href={`${tag_url}/${tag}`} class="badge badge-outline">
+                  {tag}
+                </a>
+              ))
+          }
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
