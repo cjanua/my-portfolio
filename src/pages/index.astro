@@ -1,12 +1,61 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
+import { Image } from "astro:assets";
+
 import ucfImg from "../_image/UCF.webp"
 import fullstackicon from "../_image/test2.png"
 import wendysLogo from "../_image/Wendys-Logo.png"
 import emptyImg from "../_image/empty.webp"
 import asmImg from "../_image/asmImg.jpeg"
 import nanoLogo from "../_image/nanoxd.webp"
+import linuxLogo from "../_image/linux.gif"
+import reactLogo from "../_image/React-icon.svg.png"
+import pyLogo from "../_image/python.png"
+import jsLogo from "../_image/JavaScript-logo.png"
+import tsLogo from "../_image/TS.svg"
+import goLogo from "../_image/golang.png"
+import cLogo from "../_image/C_Logo.png"
+import jLogo from "../_image/Java.jpg"
+import sLogo from "../_image/SQL.png"
+import bLogo from "../_image/shell.png"
+import vLogo from "../_image/VMBox.jpg"
+import hLogo from "../_image/html.png"
+import cssLogo from "../_image/css.png"
+import nLogo from "../_image/nextjs.svg"
+import nodeLogo from "../_image/node.png"
+import fibLogo from "../_image/gofiber.png"
+import twLogo from "../_image/twc.png"
+import shadcnLogo from "../_image/shadcn.png"
+import tanLogo from "../_image/tanstack.png"
+import exLogo from "../_image/express.png"
+import assLogo from "../_image/assembly.png"
+import faLogo from "../_image/fa.svg"
+import djLogo from "../_image/dj.png"
+import flLogo from "../_image/flask.png"
+import spLogo from "../_image/Spring.png"
+import hxLogo from "../_image/htmx.png"
+import restLogo from "../_image/rest.webp"
+import pgLogo from "../_image/ps.png"
+import mysqlLogo from "../_image/mysql.png"
+import tsdbLogo from "../_image/tsdb.png"
+import pLogo from "../_image/prisma.png"
+import gqlLogo from "../_image/gql.png"
+import bsLogo from "../_image/bs.png"
+import dockLogo from "../_image/docker.png"
+import gitLogo from "../_image/git.png"
+import pmLogo from "../_image/postman.svg"
+import vercLogo from "../_image/v.svg"
+import awsLogo from "../_image/aws.webp"
+import excelLogo from "../_image/excel.png"
+import accLogo from "../_image/access.png"
+import wordLogo from "../_image/word.png"
+import outLogo from "../_image/outlook.png"
+import ppLogo from "../_image/pp.png"
+import pbiLogo from "../_image/pbi.png"
+import odLogo from "../_image/od.png"
+import tLogo from "../_image/trello.png"
+import wLogo from "../_image/windows.png"
 ---
  
 
@@ -104,6 +153,416 @@ import nanoLogo from "../_image/nanoxd.webp"
   />
 
   <div>
-    <div class="text-3xl w-full font-bold mb-2">Projects 🎨</div>
+    <div class="text-3xl w-full font-bold mb-2">Skills</div>
+  </div>
+  <div>
+    <div class="text-2xl w-full pl-4 pb-2 font-semibold mb-2">Languages</div>
+  </div>
+
+  <div class="grid justify-center grid-cols-8 text-lg text-center gap-4 pl-8">
+    <div class = "text-sm ">
+      <Image class="pb-1 hover:scale-[110%]"
+        src = {pyLogo}
+        height = {100}
+        alt = "Python"
+      />
+      Python
+    </div>
+    <div class = "text-sm ">
+      <Image class="pb-1 hover:scale-[110%] rounded-2xl"
+        src = {jsLogo}
+        height = {100}
+        alt = "JavaScript"
+      />
+      JavaScript
+    </div>
+    <div class = "text-sm ">
+      <Image class="pb-1 hover:scale-[110%] rounded-2xl"
+        src = {tsLogo}
+        height = {100}
+        alt = "TypeScript"
+      />
+      TypeScript
+    </div>
+    <div class = "text-sm ">
+      <Image class="pb-1 hover:scale-[110%] rounded-2xl"
+        src = {cLogo}
+        height = {100}
+        alt = "C"
+      />
+      C
+    </div>
+    <div class = "text-sm ">
+      <Image class="pb-1 hover:scale-[110%]"
+        src = {goLogo}
+        height = {100}
+        alt = "Go"
+      />
+      Golang
+    </div>
+
+    <div class = "text-sm">
+      <Image class="pb-1 hover:scale-[110%]"
+        src = {jLogo}
+        height = {100}
+        alt = "Java"
+      />
+      Java
+    </div>
+    <div class = "text-sm">
+      <Image class="pb-1 hover:scale-[110%]"
+        src = {hLogo}
+        height = {100}
+        alt = "HTML"
+      />
+      HTML
+    </div>
+    <div class = "text-sm">
+      <Image class="pb-1 hover:scale-[110%]"
+        src = {cssLogo}
+        height = {100}
+        alt = "CSS"
+      />
+      CSS
+    </div>
+    <div class = "text-sm">
+      <Image class="pb-1 hover:scale-[110%]"
+        src = {sLogo}
+        height = {100}
+        alt = "SQL"
+      />
+      SQL
+    </div>
+    <div class = "text-sm">
+      <Image class="pb-1 hover:scale-[110%]"
+        src = {bLogo}
+        height = {100}
+        alt = "Batch"
+      />
+      Shell Script
+    </div>
+    <div class = "text-sm">
+      <Image class="pb-1 hover:scale-[110%]"
+        src = {assLogo}
+        height = {100}
+        alt = "MIPS"
+      />
+      MIPS Assembly
+    </div>
+  </div>
+
+  <div class="divider my-0"></div>
+
+  <div>
+    <div class="text-2xl w-full pl-4 pb-2 font-semibold mb-2">Tech</div>
+  </div>
+  <div class="grid justify-center grid-cols-8 text-lg text-center gap-4 pl-8">
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {wLogo}
+        height = {100}
+        alt = "Windows"
+      />
+      Windows Vista/7/8/10/11
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {linuxLogo}
+        height = {100}
+        alt = "Linux"
+      />
+      Linux
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {vLogo}
+        height = {100}
+        alt = "VMWare"
+      />
+      VMWare
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {dockLogo}
+        height = {100}
+        alt = "Docker"
+      />
+      Docker
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {gitLogo}
+        height = {100}
+        alt = "Git"
+      />
+      Git
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {pmLogo}
+        height = {100}
+        alt = "Postman"
+      />
+      Postman
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {awsLogo}
+        height = {100}
+        alt = "AWS"
+      />
+      AWS
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {vercLogo}
+        height = {100}
+        alt = "Vercel"
+      />
+      Vercel
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {tLogo}
+        height = {100}
+        alt = "Trello"
+      />
+      Trello
+    </div>
+  </div>
+  <div class="divider my-0"></div>
+
+  <div>
+    <div class="text-2xl w-full pl-4 pb-2 font-semibold mb-2">Frontend</div>
+  </div>
+  <div class="grid justify-center grid-cols-8 text-lg text-center gap-4 pl-8">
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {reactLogo}
+        height = {100}
+        alt = "React"
+      />
+      React
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {hxLogo}
+        height = {100}
+        alt = "HTMX"
+      />
+      HTMX
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {nLogo}
+        height = {100}
+        alt = "Next.js"
+      />
+      Next.js
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {twLogo}
+        height = {100}
+        alt = "TailWind"
+      />
+      Tailwind CSS
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%] rounded-2xl"
+        src = {bsLogo}
+        height = {100}
+        alt = "Bootstrap"
+      />
+      Bootstrap
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%] rounded-2xl"
+        src = {shadcnLogo}
+        height = {100}
+        alt = "shadcn"
+      />
+      shadcn/ui
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%] rounded-2xl"
+        src = {tanLogo}
+        height = {100}
+        alt = "TanStack"
+      />
+      TanStack Query/Table
+    </div>
+  </div>
+  <div class="divider my-0"></div>
+  <div>
+    <div class="text-2xl w-full pl-4 pb-2 font-semibold mb-2">Backend</div>
+  </div>
+  <div class="grid justify-center grid-cols-8 text-lg text-center gap-4 pl-8">
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {nodeLogo}
+        height = {100}
+        alt = "Node.js"
+      />
+      Node.js
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {restLogo}
+        height = {100}
+        alt = "REST"
+      />
+      RESTful APIs
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {exLogo}
+        height = {100}
+        alt = "Express.js"
+      />
+      Express.js
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {fibLogo}
+        height = {100}
+        alt = "Fiber"
+      />
+      Fiber
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {faLogo}
+        height = {100}
+        alt = "FastAPI"
+      />
+      FastAPI
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {djLogo}
+        height = {100}
+        alt = "django"
+      />
+      django
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {flLogo}
+        height = {100}
+        alt = "Flask"
+      />
+      Flask
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {spLogo}
+        height = {100}
+        alt = "Spring"
+      />
+      Spring
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {pgLogo}
+        height = {100}
+        alt = "postreg"
+      />
+      PostgreSQL
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {mysqlLogo}
+        height = {100}
+        alt = "MySQL"
+      />
+      MySQL
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {tsdbLogo}
+        height = {100}
+        alt = "timescaleDB"
+      />
+      TimescaleDB
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {gqlLogo}
+        height = {100}
+        alt = "GraphQL"
+      />
+      GraphQL
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {pLogo}
+        height = {100}
+        alt = "Prisma"
+      />
+      Prisma
+    </div>
+  </div>
+  <div class="divider my-0"></div>
+  <div>
+    <div class="text-2xl w-full pl-4 pb-2 font-semibold mb-2">Microsoft 365</div>
+  </div>
+  <div class="grid justify-center grid-cols-8 text-lg text-center gap-4 pl-8">
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {excelLogo}
+        height = {100}
+        alt = "Excel"
+      />
+      Excel
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {accLogo}
+        height = {100}
+        alt = "Access"
+      />
+      Access
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {pbiLogo}
+        height = {100}
+        alt = "Power BI"
+      />
+      Power BI
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {wordLogo}
+        height = {100}
+        alt = "Word"
+      />
+      Word
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {ppLogo}
+        height = {100}
+        alt = "PowerPoint"
+      />
+      PowerPoint
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {outLogo}
+        height = {100}
+        alt = "Outlook"
+      />
+      Outlook
+    </div>
+    <div class = "text-sm ">
+      <Image class = "pb-1 hover:scale-[110%]"
+        src = {odLogo}
+        height = {100}
+        alt = "OneDrive"
+      />
+      OneDrive
+    </div>
   </div>
 </BaseLayout>
