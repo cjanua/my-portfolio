@@ -2,7 +2,7 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strictNullChecks": true,
-    "baseUrl": ".",
+    "baseUrl": "D:/code pt 2/Astro Portfolio/astrofy-main",
     "paths": {
       "@components/*": [
         "src/components/*"
@@ -10,6 +10,8 @@
       "@layouts/*": [
         "src/layouts/*"
       ]
-    }
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }

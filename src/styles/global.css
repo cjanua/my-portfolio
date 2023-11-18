@@ -1,3 +1,25 @@
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+    opacity: 85;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #AAA;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
