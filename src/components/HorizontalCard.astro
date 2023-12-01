@@ -1,12 +1,12 @@
 ---
-const { title, img, url, badge, tags, target, date = "_blank", desc = [] } = Astro.props;
+const { title, img, url, badge, tags, target, date = "_blank", desc = [], bullet=true, empty=false } = Astro.props;
 import { Image } from "astro:assets";
 export const prerender = true;
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
 
 <div
-  class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
+  class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%] overflow-hidden"
 >
   <a href={url} target={target}>
     <div class="hero-content flex-col md:flex-row">
@@ -18,23 +18,23 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
             height={422}
             alt={date}
             loading = "eager"
-            class="max-w-full md:max-w-[13rem] rounded-lg"
+            class={"max-w-full md:max-w-[13rem] rounded-lg " + (empty ? "hidden md:flex" : "")}
           />
-        ) : <></>
+        ) : <></>       
       }
       <div class="grow w-full">
         <div class="grid grid-flow-col justify-between">
           <div class="grid grid-flow-col justify-between gap-2">
-            <h1 class="text-xl font-bold">{title}</h1>
-            {date != "_blank" ? <h2 class="text-xl">- {date}</h2> : <></>}
+            <h1 class="text-xl font-bold grid place-content-center">{title}</h1>
+            {date != "_blank" ? <h2 class="grid place-content-center font-extralight opacity-90">{date}</h2> : <></>}
           </div>    
-          <div class="">
-            {badge && <div class="badge badge-secondary rounded-md shadow-xl text-m mx-2">{badge}</div>}
+          <div class="grid place-content-center">
+            {badge && <div class="badge badge-secondary rounded-md shadow-xl text-md mx-2 h-fit">{badge}</div>}
           </div>
           
         </div>
 
-        <ul class="py-1 pl-2 text-1xl">{
+        <ul class=`py-1 pl-2 text-1xl ${bullet ? " list-outside list-disc " : ""}`>{
           () => {
             try {
               return desc.map((d) => (

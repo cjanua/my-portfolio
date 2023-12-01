@@ -57,12 +57,17 @@ import odLogo from "../_image/od.png";
 import tLogo from "../_image/trello.png";
 import wLogo from "../_image/windows.png";
 import mdbLogo from "../_image/mdb.svg";
+import { ViewTransitions, slide } from 'astro:transitions';
+
 ---
  
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hello 👋</div>
+  <head>
+    <ViewTransitions animation={slide({duration:"2.0s"})}/>
+   </head>
+  <div class="w-full">
+    <div class="text-xl  ">Hello 👋</div>
     <div class="text-5xl font-bold">I'm Christopher Januario</div>
     <div class="text-3xl py-3 font-bold">
       Software Engineer and Mathematician
@@ -72,25 +77,26 @@ import mdbLogo from "../_image/mdb.svg";
         Welcome to my <b>Blazingly Fast🔥</b> portfolio.
       </text>
     </div>
-    <div class="mt-8">
-      <a class="btn" href="https://www.linkedin.com/in/christopher-januario/" target="_blank">
-        Let's connect!</a
-      >
+    <div class="grid grid-cols-2 gap-2">
       <a
         href="/ChrisResume24Q1.pdf"
         target="_blank"
-        class="btn btn-outline ml-5"
+        class="btn btn-outline "
       >
         View Résumé
       </a>
       <a
         href="https://home.cjanua.xyz"
         target="_blank"
-        class="btn btn-outline ml-5"
+        class="btn btn-outline "
       >
         Projects
       </a>
+      <a class="btn" href="https://www.linkedin.com/in/christopher-januario/" target="_blank">
+        Let's connect!</a
+      >
     </div>
+    
   </div>
 
   <div>
@@ -102,8 +108,9 @@ import mdbLogo from "../_image/mdb.svg";
     date="University of Central Florida"
     badge="2022 - 2026 (expected)"
     img={ucfImg}
-    desc={["Double Major: Computer Science and Mathematics", "Minor: Physics"]}
+    desc={["Major: Mathematics and Computer Science", "Minor: Physics"]}
     url="#"
+    bullet={false}
   />
 
   <div>
@@ -115,10 +122,10 @@ import mdbLogo from "../_image/mdb.svg";
     date="SCI Solutions, LLC"
     img={fullstackicon}
     desc={[
-      "• Converted legacy PHP website to React with TypeScript",
-      "• Created CRUD API using Express in Next.js App Router to manage production DB",
-      "• Designed and styled components using Radix-UI and TailwindCSS",
-      "• Working in Trello using Agile SCRUM methodology",
+      "Converted legacy PHP website to React with TypeScript",
+      "Created CRUD API using Express in Next.js App Router to manage production DB",
+      "Designed and styled components using Radix-UI and TailwindCSS",
+      "Working in Trello using Agile SCRUM methodology",
     ]}
     url="#"
     badge="08/2023 - Present"
@@ -129,10 +136,9 @@ import mdbLogo from "../_image/mdb.svg";
     date="Wendy's (Orlando, FL)"
     img={wendysLogo}
     desc={[
-      "• Worked nearly 40 hours per week",
-      "• Received ServSafe Certification, responsible for health of customers",
-      "• Managed Inventory and Waste by logging and creating sales forecasts",
-      "• Responsible for all store-related problems: technological, mechanical, and social",
+      "Received ServSafe Certification, responsible for health of customers",
+      "Managed Inventory and Waste by logging and creating sales forecasts",
+      "Responsible for all store-related problems: technological, mechanical, and social",
     ]}
     url="#"
     badge="08/2022 - 12/2022"
@@ -141,10 +147,10 @@ import mdbLogo from "../_image/mdb.svg";
     title="Team Trainer"
     date="Wendy's (Weston, FL)"
     img={emptyImg}
+    empty={true}
     desc={[
-      "• Worked 30+ hours per week",
-      "• Responsible for correctly processing orders, money, and speed of service",
-      "• Implemented weekly systems for sanitation and inventory. Delegated tasks to crew",
+      "Responsible for correctly processing orders, money, and speed of service",
+      "Implemented weekly systems for sanitation and inventory. Delegated tasks to crew",
     ]}
     badge="02/2022 - 08/2022"
     url="#"
@@ -156,9 +162,9 @@ import mdbLogo from "../_image/mdb.svg";
     date="ASM Music Schools"
     img={asmImg}
     desc={[
-      "• Taught for Eloy Oliveros, a Cuban Latin Percussionist",
-      "• Motivated and trained students K-12",
-      "• Designed plans and assigned homework based on students’ progress",
+      "Taught for Eloy Oliveros, a Cuban Latin Percussionist",
+      "Motivated and trained students K-12",
+      "Designed plans and assigned homework based on students’ progress",
     ]}
     url="#"
     badge="02/2021 - 06/2022"
@@ -169,9 +175,9 @@ import mdbLogo from "../_image/mdb.svg";
     date="NanoXD International"
     img={nanoLogo}
     desc={[
-      "• Designed User Interface and content display",
-      "• Responsible for the pages of production eCommerce site",
-      "• Built and styled the UI in WordPress",
+      "Designed User Interface and content display",
+      "Responsible for the pages of production eCommerce site",
+      "Built and styled the UI in WordPress",
     ]}
     url="#"
     badge="02/2021 - 06/2022"
@@ -181,132 +187,145 @@ import mdbLogo from "../_image/mdb.svg";
       <div class="text-3xl w-full font-bold mb-2">Technologies 💻</div>
     </div>
     <div>
-      <div class="text-2xl w-full pl-4 pb-2 font-semibold mb-2">Languages</div>
+      <div class="text-2xl w-full pl-4   font-semibold mb-2">Languages</div>
     </div>
 
-    <div class="grid justify-center grid-cols-8 text-lg text-center gap-4 pl-8">
+    <div class="grid justify-center grid-cols-8 text-lg text-center gap-2 pl-8">
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={pyLogo}
             height={100}
             alt="Python"
           />
         </div>
-         Python
+        <div class="hidden sm:focus:grid md:grid">
+          Python
+        </div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%] rounded-2xl"
+            class="  hover:scale-[110%] rounded-2xl"
             src={jsLogo}
             height={100}
             alt="JavaScript"
           />
         </div>
+        <div class="hidden md:grid">
          JavaScript
+        </div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%] rounded-2xl"
+            class="  hover:scale-[110%] rounded-2xl"
             src={tsLogo}
             height={100}
             alt="TypeScript"
           />
         </div>
-         TypeScript
+        <div class="hidden md:grid">
+         TypeScript</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%] rounded-2xl"
+            class="  hover:scale-[110%] rounded-2xl"
             src={cLogo}
             height={100}
             alt="C"
           />
         </div>
-         C
+        <div class="hidden md:grid">
+         C</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={goLogo}
             height={100}
             alt="Go"
           />
         </div>
-         Golang
+        <div class="hidden md:grid">
+          Golang</div>
       </div>
 
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={jLogo}
             height={100}
             alt="Java"
           />
         </div>
 
-         Java
+        <div class="hidden md:grid">
+          Java</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={hLogo}
             height={100}
             alt="HTML"
           />
         </div>
-         HTML
+        <div class="hidden md:grid">
+          HTML</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={cssLogo}
             height={100}
             alt="CSS"
           />
         </div>
-         CSS
+        <div class="hidden md:grid">
+          CSS</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={sLogo}
             height={100}
             alt="SQL"
           />
         </div>
-         SQL
+        <div class="hidden md:grid">
+          SQL</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={bLogo}
             height={100}
             alt="Batch"
           />
         </div>
-         Shell Script
+        <div class="hidden md:grid">
+          Shell/Bash</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={assLogo}
             height={100}
             alt="MIPS"
           />
         </div>
-         MIPS Assembly
+        <div class="hidden md:grid">
+          MIPS Assembly</div>
       </div>
     </div>
 
@@ -314,440 +333,479 @@ import mdbLogo from "../_image/mdb.svg";
 
     
     <div>
-      <div class="text-2xl w-full pl-4 pb-2 font-semibold mb-2">Backend</div>
+      <div class="text-2xl w-full pl-4 font-semibold mb-2">Backend</div>
     </div>
-    <div class="grid justify-center grid-cols-8 text-lg text-center gap-4 pl-8">
+    <div class="grid justify-center grid-cols-8 text-lg text-center gap-2 pl-8">
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={nodeLogo}
             height={100}
             alt="Node.js"
           />
         </div>
-         Node.js
+        <div class="hidden md:grid">
+          Node.js</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={restLogo}
             height={100}
             alt="REST"
           />
         </div>
-         RESTful APIs
+        <div class="hidden md:grid">
+          RESTful APIs</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={exLogo}
             height={100}
             alt="Express.js"
           />
         </div>
 
-         Express.js
+        <div class="hidden md:grid">
+          Express.js</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={fibLogo}
             height={100}
             alt="Fiber"
           />
         </div>
-         Fiber
+        <div class="hidden md:grid">
+          Fiber</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={faLogo}
             height={100}
             alt="FastAPI"
           />
         </div>
-         FastAPI
+        <div class="hidden md:grid">
+          FastAPI</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={djLogo}
             height={100}
             alt="django"
           />
         </div>
-         django
+        <div class="hidden md:grid">
+          django</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={flLogo}
             height={100}
             alt="Flask"
           />
         </div>
-         Flask
+        <div class="hidden md:grid">
+          Flask</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={spLogo}
             height={100}
             alt="Spring"
           />
         </div>
-         Spring
+        <div class="hidden md:grid">
+          Spring</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={pgLogo}
             height={100}
             alt="postreg"
           />
         </div>
-         PostgreSQL
+        <div class="hidden md:grid">
+          PostgreSQL</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={mysqlLogo}
             height={100}
             alt="MySQL"
           />
         </div>
-         MySQL
+        <div class="hidden md:grid">
+          MySQL</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={mdbLogo}
             height={100}
             alt="MongoDB"
           />
         </div>
-         MongoDB
+        <div class="hidden md:grid">
+          MongoDB</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={tsdbLogo}
             height={100}
             alt="timescaleDB"
           />
         </div>
-         TimescaleDB
+        <div class="hidden md:grid">
+          TimescaleDB</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={gqlLogo}
             height={100}
             alt="GraphQL"
           />
         </div>
-         GraphQL
+        <div class="hidden md:grid">
+          GraphQL</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={pLogo}
             height={100}
             alt="Prisma"
           />
         </div>
-         Prisma
+        <div class="hidden md:grid">
+          Prisma</div>
       </div>
     </div>
 
     <div class="divider my-0"></div>
 
     <div>
-      <div class="text-2xl w-full pl-4 pb-2 font-semibold mb-2">Frontend</div>
+      <div class="text-2xl w-full pl-4   font-semibold mb-2">Frontend</div>
     </div>
-    <div class="grid justify-center grid-cols-8 text-lg text-center gap-4 pl-8">
+    <div class="grid justify-center grid-cols-8 text-lg text-center gap-2 pl-8">
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={reactLogo}
             height={100}
             alt="React"
           />
         </div>
-         React
+        <div class="hidden md:grid">
+          React.js</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={hxLogo}
             height={100}
             alt="HTMX"
           />
         </div>
-         HTMX
+        <div class="hidden md:grid">
+          HTMX</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={nLogo}
             height={100}
             alt="Next.js"
           />
         </div>
-         Next.js
+        <div class="hidden md:grid">
+          Next.js</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={twLogo}
             height={100}
             alt="TailWind"
           />
         </div>
-         Tailwind CSS
+        <div class="hidden md:grid">
+          Tailwind CSS</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%] rounded-2xl"
+            class="  hover:scale-[110%] rounded-2xl"
             src={bsLogo}
             height={100}
             alt="Bootstrap"
           />
         </div>
-         Bootstrap
+        <div class="hidden md:grid">
+          Bootstrap</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%] rounded-2xl"
+            class="  hover:scale-[110%] rounded-2xl"
             src={shadcnLogo}
             height={100}
             alt="shadcn"
           />
         </div>
-         shadcn/ui
+        <div class="hidden md:grid">
+          Shadcn/ui</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%] rounded-2xl"
+            class="  hover:scale-[110%] rounded-2xl"
             src={tanLogo}
             height={100}
             alt="TanStack"
           />
         </div>
-         TanStack Query/Table
+        <div class="hidden md:grid">
+          TanStack Query & Table</div>
       </div>
     </div>
     
     
     <div class="divider my-0"></div>
     <div>
-      <div class="text-2xl w-full pl-4 pb-2 font-semibold mb-2">Tech</div>
+      <div class="text-2xl w-full pl-4   font-semibold mb-2">Tech</div>
     </div>
-    <div class="grid justify-center grid-cols-8 text-lg text-center gap-4 pl-8">
+    <div class="grid justify-center grid-cols-8 text-lg text-center gap-2 pl-8">
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={wLogo}
             height={100}
             alt="Windows"
           />
         </div>
-         Windows Vista/7/8/10/11
+         
+         <div class="hidden md:grid">
+          Windows Vista/7/8/10/11</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={linuxLogo}
             height={100}
             alt="Linux"
           />
         </div>
-         Linux
+        
+        <div class="hidden md:grid">
+          Linux</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={vLogo}
             height={100}
             alt="VMWare"
           />
         </div>
-         VM VirtualBox
+        <div class="hidden md:grid">
+          VM VirtualBox</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={dockLogo}
             height={100}
             alt="Docker"
           />
         </div>
-         Docker
+        <div class="hidden md:grid">
+          Docker</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={gitLogo}
             height={100}
             alt="Git"
           />
         </div>
-         Git
+        <div class="hidden md:grid">
+          Git</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={pmLogo}
             height={100}
             alt="Postman"
           />
         </div>
-         Postman
+        <div class="hidden md:grid">
+          Postman</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={awsLogo}
             height={100}
             alt="AWS"
           />
         </div>
-         AWS
+        <div class="hidden md:grid">
+          AWS</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={vercLogo}
             height={100}
             alt="Vercel"
           />
         </div>
-         Vercel
+        <div class="hidden md:grid">
+          Vercel</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class="h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={tLogo}
             height={100}
             alt="Trello"
           />
         </div>
-         Trello
+        <div class="hidden md:grid">
+          Trello</div>
       </div>
     </div>
     <div class="divider my-0"></div>
     <div>
-      <div class="text-2xl w-full pl-4 pb-2 font-semibold mb-2">
+      <div class="text-2xl w-full pl-4   font-semibold mb-2">
         Microsoft 365
       </div>
     </div>
-    <div class="grid justify-center grid-cols-8 text-lg text-center gap-4 pl-8">
+    <div class="grid justify-center grid-cols-8 text-lg text-center gap-2 pl-8">
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={excelLogo}
             height={100}
             alt="Excel"
           />
         </div>
-         Excel
+        <div class="hidden md:grid">
+          Excel</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={accLogo}
             height={100}
             alt="Access"
           />
         </div>
-         Access
+        <div class="hidden md:grid">
+          Access</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={pbiLogo}
             height={100}
             alt="Power BI"
           />
         </div>
-         Power BI
+        <div class="hidden md:grid">
+          Power BI</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={wordLogo}
             height={100}
             alt="Word"
           />
         </div>
-         Word
+        <div class="hidden md:grid">
+          Word</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={ppLogo}
             height={100}
             alt="PowerPoint"
           />
         </div>
-         PowerPoint
+        <div class="hidden md:grid">
+          PowerPoint</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={outLogo}
             height={100}
             alt="Outlook"
           />
         </div>
-         Outlook
+        <div class="hidden md:grid">
+          Outlook</div>
       </div>
       <div class="text-sm">
-        <div class="h-24 grid content-center">
+        <div class=" h-16 grid content-center">
           <Image
-            class="pb-1 hover:scale-[110%]"
+            class="  hover:scale-[110%]"
             src={odLogo}
             height={100}
             alt="OneDrive"
           />
         </div>
-         OneDrive
+        <div class="hidden md:grid">
+          OneDrive</div>
       </div>
     </div>
   </div>

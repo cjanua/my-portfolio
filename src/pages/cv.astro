@@ -1,9 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
+import { ViewTransitions, slide } from 'astro:transitions';
+
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <head>
+    <ViewTransitions animation={slide({duration:"2.0s", fillMode:"backwards"})}/>
+   </head>
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Profile</div>
   </div>
@@ -21,13 +26,31 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
+      title="BS in Mathematics and Computer Science"
+      subtitle="2022 to 2026 at University of Central Florida - Orlando, FL"
+    >
+      <ul class = "pl-4">
+        <li>
+          • Minor in Physics
+        </li>
+      </ul>
+    </TimeLineElement>
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
+      title="High School"
+      subtitle="2018 to 2022 at Cypress Bay HS - Weston, FL"
+    >
+      <ul class = "pl-4">
+        <li>
+          • AP Scholar with Distinction
+        </li>
+        <li>
+          • Awarded Cambridge AICE Diploma
+        </li>
+        <li>
+          • 3.37/4.0 GPA
+        </li>
+      </ul>
+    </TimeLineElement>
   </div>
 
   <div class="mb-5">
@@ -36,23 +59,85 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Full Stack Developer"
+      subtitle="From 08/2023 to present at SCI Solutions, LLC - Sunrise, FL [Remote]"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class = "pl-4 pb-4">
+        <li>
+          • Converted legacy PHP website to React with TypeScript
+        </li>
+        <li>
+          • Created CRUD API using Express in Next.js App Router to manage production DB
+        </li>
+        <li>
+          • Designed and styled components using Radix-UI and TailwindCSS
+        </li>
+        <li>
+          • Working in Trello using Agile SCRUM methodology
+        </li>
+      </ul>
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Shift Manager"
+      subtitle="From 08/2022 to 12/2022 at Wendy's - Orlando, FL"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <ul class = "pl-4 pb-4">
+        <li>
+          • Received ServSafe Certification, responsible for health of customers
+        </li>
+        <li>
+          •  Managed Inventory and Waste by logging and creating sales forecasts
+        </li>
+        <li>
+          • Responsible for all store-related problems: technological, mechanical, and social
+        </li>
+      </ul>
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Team Trainer"
+      subtitle="From 02/2022 to 08/2022 at Wendy's - Weston, FL"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-    </TimeLineElement>
+    <ul class = "pl-4 pb-4">
+      <li>
+        • Responsible for correctly processing orders, money, and speed of service
+      </li>
+      <li>
+        • Implemented weekly systems for sanitation and inventory. Delegated tasks to crew
+      </li>
+    </ul>    
+  </TimeLineElement>
+  <TimeLineElement
+      title="Substitute Music Teacher"
+      subtitle="From 02/2021 to 06/2022 at ASM Music Schools - Davie, FL"
+    >
+    <ul class = "pl-4 pb-4">
+      <li>
+        • Taught for Eloy Oliveros, a Cuban Latin Percussionist
+      </li>
+      <li>
+        • Motivated and trained students K-12
+      </li>
+      <li>
+        • Designed plans and assigned homework based on students’ progress
+      </li>
+    </ul>    
+  </TimeLineElement>
+  <TimeLineElement
+      title="UI/eCommerce Developer"
+      subtitle="From 06/2018 to 03/2020 at NanoXD International - Weston, FL"
+    >
+    <ul class = "pl-4 pb-4 ">
+      <li>
+        • Designed User Interface and content display
+      </li>
+      <li>
+        • Responsible for the pages of production eCommerce site
+      </li>
+      <li>
+        • Built and styled the UI in WordPress
+      </li>
+    </ul>    
+  </TimeLineElement>
   </div>
 
   <div class="mb-5">
