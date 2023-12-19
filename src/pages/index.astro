@@ -92,7 +92,106 @@ const backList: IconData[] = [
   { name: "GraphQL", logo:gqlLogo },
   { name: "Prisma", logo: pLogo },
 ]
-
+const frontList: IconData[] = [
+  { name: "React.js", logo: reactLogo },
+  { name: "HTMX", logo: hxLogo },
+  { name: "Next.js", logo:nLogo },
+  { name: "Tailwind CSS", logo: twLogo },
+  { name: "Bootstrap", logo:bsLogo },
+  { name: "shadcn/ui", logo: shadcnLogo },
+  { name: "Tanstack React Table", logo: tanLogo },
+]
+const techList: IconData[] = [
+  { name: "Windows Vista/7/8/10/11", logo: wLogo },
+  { name: "Linux", logo: linuxLogo },
+  { name: "Oracle VM VirtualBox", logo:vLogo },
+  { name: "Docker", logo: dockLogo },
+  { name: "Git/Github", logo:gitLogo },
+  { name: "Postman", logo: pmLogo },
+  { name: "AWS", logo: awsLogo },
+  { name: "Vercel", logo: vercLogo },
+  { name: "Trello", logo: tLogo },
+]
+const mcList: IconData[] = [
+  { name: "Excel", logo: excelLogo },
+  { name: "Access", logo: accLogo },
+  { name: "Power BI", logo:pbiLogo },
+  { name: "Word", logo: wordLogo },
+  { name: "PowerPoint", logo:ppLogo },
+  { name: "Outlook", logo: outLogo },
+  { name: "OneDrive", logo: odLogo },
+]
+// <div class="grid justify-center grid-cols-8 text-lg text-center gap-2 pl-8">
+//       <div class="text-sm">
+//         <div class="grid content-center tooltip" data-tip="Excel">
+//           <Image
+//             class="hover:scale-[110%]"
+//             src={excelLogo}
+//             height={100}
+//             alt="Excel"
+//           />
+//         </div>
+//       </div>
+//       <div class="text-sm">
+//         <div class="grid content-center tooltip" data-tip="Access">
+//           <Image
+//             class="hover:scale-[110%]"
+//             src={accLogo}
+//             height={100}
+//             alt="Access"
+//           />
+//         </div>
+//       </div>
+//       <div class="text-sm">
+//         <div class="grid content-center tooltip" data-tip="Power BI">
+//           <Image
+//             class="hover:scale-[110%]"
+//             src={pbiLogo}
+//             height={100}
+//             alt="Power BI"
+//           />
+//         </div>
+//       </div>
+//       <div class="text-sm">
+//         <div class="grid content-center tooltip" data-tip="Word">
+//           <Image
+//             class="hover:scale-[110%]"
+//             src={wordLogo}
+//             height={100}
+//             alt="Word"
+//           />
+//         </div>
+//       </div>
+//       <div class="text-sm">
+//         <div class="grid content-center tooltip" data-tip="PowerPoint">
+//           <Image
+//             class="hover:scale-[110%]"
+//             src={ppLogo}
+//             height={100}
+//             alt="PowerPoint"
+//           />
+//         </div>
+//       </div>
+//       <div class="text-sm">
+//         <div class="grid content-center tooltip" data-tip="Outlook">
+//           <Image
+//             class="hover:scale-[110%]"
+//             src={outLogo}
+//             height={100}
+//             alt="Outlook"
+//           />
+//         </div>
+//       </div>
+//       <div class="text-sm">
+//         <div class="grid content-center tooltip" data-tip="OneDrive">
+//           <Image
+//             class="hover:scale-[110%]"
+//             src={odLogo}
+//             height={100}
+//             alt="OneDrive"
+//           />
+//         </div>
+//       </div>
 ---
 
 <BaseLayout sideBarActiveItemID="home">
@@ -202,285 +301,49 @@ const backList: IconData[] = [
     />
   </div>
   <div>
-    <div class="text-3xl w-full font-bold mb-2">Technologies 💻</div>
-    <div class="text-2xl w-full pl-4 font-semibold pb-4">Languages</div>
-
+    <div class="text-3xl w-full font-bold pb-2">Technologies 💻</div>
+    <div class="text-2xl w-full pl-8 font-semibold pb-1">Languages</div>
+    
     <div
-      class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8"
+      class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
     >
       {langList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
 
     <div class="divider my-0" />
 
-    <div class="text-2xl w-full pl-4 font-semibold mb-2">Backend</div>
+    <div class="text-2xl w-full pl-8 font-semibold">Backend</div>
     <div
-      class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8"
+      class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
     >
       {backList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
 
-    <div class="divider my-0"></div>
+    <div class="divider my-0" />
 
-    <div>
-      <div class="text-2xl w-full pl-4 font-semibold mb-2">Frontend</div>
-    </div>
-    <div class="grid justify-center grid-cols-8 text-lg text-center gap-2 pl-8">
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="React.js">
-          <Image
-            class="hover:scale-[110%]"
-            src={reactLogo}
-            height={100}
-            alt="React"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="HTMX">
-          <Image
-            class="hover:scale-[110%]"
-            src={hxLogo}
-            height={100}
-            alt="HTMX"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Next.js">
-          <Image
-            class="hover:scale-[110%]"
-            src={nLogo}
-            height={100}
-            alt="Next.js"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div
-          class="grid content-center align-middle tooltip"
-          data-tip="Tailwind CSS"
-        >
-          <Image
-            class="content-center hover:scale-[110%]"
-            src={twLogo}
-            height={100}
-            alt="TailWind"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Bootstrap">
-          <Image
-            class="hover:scale-[110%] rounded-2xl"
-            src={bsLogo}
-            height={100}
-            alt="Bootstrap"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="shadcn/ui">
-          <Image
-            class="hover:scale-[110%] rounded-2xl"
-            src={shadcnLogo}
-            height={100}
-            alt="shadcn"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div
-          class="grid content-center tooltip"
-          data-tip="Tanstack React Table"
-        >
-          <Image
-            class="hover:scale-[110%] rounded-2xl"
-            src={tanLogo}
-            height={100}
-            alt="TanStack"
-          />
-        </div>
-      </div>
+
+    <div class="text-2xl w-full pl-8 font-semibold">Frontend</div>
+    <div
+      class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
+    >
+      {frontList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
 
-    <div class="divider my-0"></div>
-    <div>
-      <div class="text-2xl w-full pl-4 font-semibold mb-2">Tech</div>
+
+    <div class="divider my-0" />
+    <div class="text-2xl w-full pl-8 font-semibold">Tech</div>
+    <div
+      class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
+    >
+      {techList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
-    <div class="grid justify-center grid-cols-8 text-lg text-center gap-2 pl-8">
-      <div class="text-sm">
-        <div
-          class="grid content-center tooltip"
-          data-tip="Windows Vista/7/8/10/11"
-        >
-          <Image
-            class="hover:scale-[110%]"
-            src={wLogo}
-            height={100}
-            alt="Windows"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Linux">
-          <Image
-            class="hover:scale-[110%]"
-            src={linuxLogo}
-            height={100}
-            alt="Linux"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div
-          class="grid content-center tooltip"
-          data-tip="Oracle VM VirtualBox"
-        >
-          <Image
-            class="hover:scale-[110%]"
-            src={vLogo}
-            height={100}
-            alt="VMWare"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Docker">
-          <Image
-            class="hover:scale-[110%]"
-            src={dockLogo}
-            height={100}
-            alt="Docker"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Git/Github">
-          <Image
-            class="hover:scale-[110%]"
-            src={gitLogo}
-            height={100}
-            alt="Git"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Postman">
-          <Image
-            class="hover:scale-[110%]"
-            src={pmLogo}
-            height={100}
-            alt="Postman"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="AWS">
-          <Image
-            class="hover:scale-[110%]"
-            src={awsLogo}
-            height={100}
-            alt="AWS"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Vercel">
-          <Image
-            class="hover:scale-[110%]"
-            src={vercLogo}
-            height={100}
-            alt="Vercel"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Trello">
-          <Image
-            class="hover:scale-[110%]"
-            src={tLogo}
-            height={100}
-            alt="Trello"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="divider my-0"></div>
-    <div>
-      <div class="text-2xl w-full pl-4 font-semibold mb-2">Microsoft 365</div>
-    </div>
-    <div class="grid justify-center grid-cols-8 text-lg text-center gap-2 pl-8">
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Excel">
-          <Image
-            class="hover:scale-[110%]"
-            src={excelLogo}
-            height={100}
-            alt="Excel"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Access">
-          <Image
-            class="hover:scale-[110%]"
-            src={accLogo}
-            height={100}
-            alt="Access"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Power BI">
-          <Image
-            class="hover:scale-[110%]"
-            src={pbiLogo}
-            height={100}
-            alt="Power BI"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Word">
-          <Image
-            class="hover:scale-[110%]"
-            src={wordLogo}
-            height={100}
-            alt="Word"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="PowerPoint">
-          <Image
-            class="hover:scale-[110%]"
-            src={ppLogo}
-            height={100}
-            alt="PowerPoint"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Outlook">
-          <Image
-            class="hover:scale-[110%]"
-            src={outLogo}
-            height={100}
-            alt="Outlook"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="OneDrive">
-          <Image
-            class="hover:scale-[110%]"
-            src={odLogo}
-            height={100}
-            alt="OneDrive"
-          />
-        </div>
-      </div>
+
+    <div class="divider my-0" />
+    <div class="text-2xl w-full pl-8 font-semibold ">Microsoft 365</div>
+    <div
+      class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
+    >
+      {mcList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
   </div>
 </BaseLayout>
