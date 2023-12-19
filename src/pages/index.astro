@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
-import { Image } from "astro:assets";
 
 import ucfImg from "../_image/UCF.webp";
 import fullstackicon from "../_image/test2.png";
@@ -121,89 +120,18 @@ const mcList: IconData[] = [
   { name: "Outlook", logo: outLogo },
   { name: "OneDrive", logo: odLogo },
 ]
-// <div class="grid justify-center grid-cols-8 text-lg text-center gap-2 pl-8">
-//       <div class="text-sm">
-//         <div class="grid content-center tooltip" data-tip="Excel">
-//           <Image
-//             class="hover:scale-[110%]"
-//             src={excelLogo}
-//             height={100}
-//             alt="Excel"
-//           />
-//         </div>
-//       </div>
-//       <div class="text-sm">
-//         <div class="grid content-center tooltip" data-tip="Access">
-//           <Image
-//             class="hover:scale-[110%]"
-//             src={accLogo}
-//             height={100}
-//             alt="Access"
-//           />
-//         </div>
-//       </div>
-//       <div class="text-sm">
-//         <div class="grid content-center tooltip" data-tip="Power BI">
-//           <Image
-//             class="hover:scale-[110%]"
-//             src={pbiLogo}
-//             height={100}
-//             alt="Power BI"
-//           />
-//         </div>
-//       </div>
-//       <div class="text-sm">
-//         <div class="grid content-center tooltip" data-tip="Word">
-//           <Image
-//             class="hover:scale-[110%]"
-//             src={wordLogo}
-//             height={100}
-//             alt="Word"
-//           />
-//         </div>
-//       </div>
-//       <div class="text-sm">
-//         <div class="grid content-center tooltip" data-tip="PowerPoint">
-//           <Image
-//             class="hover:scale-[110%]"
-//             src={ppLogo}
-//             height={100}
-//             alt="PowerPoint"
-//           />
-//         </div>
-//       </div>
-//       <div class="text-sm">
-//         <div class="grid content-center tooltip" data-tip="Outlook">
-//           <Image
-//             class="hover:scale-[110%]"
-//             src={outLogo}
-//             height={100}
-//             alt="Outlook"
-//           />
-//         </div>
-//       </div>
-//       <div class="text-sm">
-//         <div class="grid content-center tooltip" data-tip="OneDrive">
-//           <Image
-//             class="hover:scale-[110%]"
-//             src={odLogo}
-//             height={100}
-//             alt="OneDrive"
-//           />
-//         </div>
-//       </div>
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="text-lg grid">
+  <div class="text-lg grid w-fit">
     <div class="pl-8 py-2">Hello 👋</div>
-    <div class="">I'm <b class="text-4xl text-center md:text-5xl"> Christopher Januario</b></div>
+    <div class="grid grid-flow-row lg:grid-flow-col pl-8 pb-4"><p class="lg:relative -bottom-[20px]">I'm</p><b class="text-4xl md:text-5xl pl-4 w-fit"> Christopher Januario</b></div>
     <b class="text-xl pl-8 pb-4">Software Engineer and Mathematician</b>
-    <div class="flex gap-1 pl-8 pb-16">
+    <div class="pl-8 ">
       Welcome to my <b> Blazingly Fast🔥</b>portfolio.
     </div>
   </div>
-  <div class="grid grid-cols-4 gap-x-8 gap-y-2 pb-12 lg:px-32">
+  <div class="grid grid-cols-4 gap-x-8 gap-y-4 py-12 md:px-16 lg:px-32">
     <a href="/ChrisResume24Q1.pdf" target="_blank" class="btn btn-outline col-span-2">
       View Résumé
     </a>
