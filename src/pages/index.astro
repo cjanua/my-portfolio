@@ -76,11 +76,28 @@ const langList: IconData[] = [
   { name: "PowerShell", logo: bLogo },
   { name: "MIPS Assembly", logo: assLogo },
 ];
+
+const backList: IconData[] = [
+  { name: "Node.js", logo: nodeLogo },
+  { name: "Restful APIs", logo: restLogo },
+  { name: "Express.js", logo:exLogo },
+  { name: "Fiber", logo: fibLogo },
+  { name: "FastAPI", logo: faLogo },
+  { name: "django", logo: djLogo },
+  { name: "Flask", logo: flLogo },
+  { name: "Spring", logo: spLogo },
+  { name: "PostgreSQL", logo: pgLogo },
+  { name: "MongoDB", logo:mdbLogo },
+  { name: "TimescaleDB", logo: tsdbLogo },
+  { name: "GraphQL", logo:gqlLogo },
+  { name: "Prisma", logo: pLogo },
+]
+
 ---
 
 <BaseLayout sideBarActiveItemID="home">
   <div class="text-lg grid">
-    <div class="pl-8 pb-2">Hello 👋</div>
+    <div class="pl-8 py-2">Hello 👋</div>
     <div class="">I'm <b class="text-4xl text-center md:text-5xl"> Christopher Januario</b></div>
     <b class="text-xl pl-8 pb-4">Software Engineer and Mathematician</b>
     <div class="flex gap-1 pl-8 pb-16">
@@ -194,155 +211,13 @@ const langList: IconData[] = [
       {langList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
 
-    <div class="divider my-0"></div>
+    <div class="divider my-0" />
 
-    <div>
-      <div class="text-2xl w-full pl-4 font-semibold mb-2">Backend</div>
-    </div>
+    <div class="text-2xl w-full pl-4 font-semibold mb-2">Backend</div>
     <div
       class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8"
     >
-      <div class="text-sm">
-        <div
-          class="grid justify-items-center content-center tooltip"
-          data-tip="Node.js"
-        >
-          <Image
-            class="hover:scale-[110%]"
-            src={nodeLogo}
-            height={100}
-            alt="Node.js"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="RESTful APIs">
-          <Image
-            class="hover:scale-[110%]"
-            src={restLogo}
-            height={100}
-            alt="REST"
-          />
-        </div>
-      </div>
-      <div class="grid content-center tooltip" data-tip="Express.js">
-        <Image
-          class="hover:scale-[110%]"
-          src={exLogo}
-          height={100}
-          alt="Express.js"
-        />
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Fiber">
-          <Image
-            class="hover:scale-[110%]"
-            src={fibLogo}
-            height={100}
-            alt="Fiber"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="FastAPI">
-          <Image
-            class="hover:scale-[110%]"
-            src={faLogo}
-            height={100}
-            alt="FastAPI"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="django">
-          <Image
-            class="hover:scale-[110%]"
-            src={djLogo}
-            height={100}
-            alt="django"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Flask">
-          <Image
-            class="hover:scale-[110%]"
-            src={flLogo}
-            height={100}
-            alt="Flask"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Spring">
-          <Image
-            class="hover:scale-[110%]"
-            src={spLogo}
-            height={100}
-            alt="Spring"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="PostgreSQL">
-          <Image
-            class="hover:scale-[110%]"
-            src={pgLogo}
-            height={100}
-            alt="postreg"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="MySQL">
-          <Image
-            class="hover:scale-[110%]"
-            src={mysqlLogo}
-            height={100}
-            alt="MySQL"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="MongoDB">
-          <Image
-            class="hover:scale-[110%]"
-            src={mdbLogo}
-            height={100}
-            alt="MongoDB"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="TimescaleDB">
-          <Image
-            class="hover:scale-[110%]"
-            src={tsdbLogo}
-            height={100}
-            alt="timescaleDB"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="GraphQL">
-          <Image
-            class="hover:scale-[110%]"
-            src={gqlLogo}
-            height={100}
-            alt="GraphQL"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="grid content-center tooltip" data-tip="Prisma">
-          <Image
-            class="hover:scale-[110%]"
-            src={pLogo}
-            height={100}
-            alt="Prisma"
-          />
-        </div>
-      </div>
+      {backList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
 
     <div class="divider my-0"></div>
