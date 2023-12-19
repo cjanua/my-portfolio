@@ -9,14 +9,6 @@ import compress from "astro-compress";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://astrofy-template.netlify.app',
-  integrations: [sitemap(), tailwind(), react(), compress({
-    Path: ["./src", "./src/*"],
-    CSS: true,
-			HTML: true,
-			Image: true,
-			JavaScript: true,
-			SVG: true,
-
-  })],
+  integrations: [sitemap(), tailwind(), react()],
   compressHTML: true
 });

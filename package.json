@@ -20,7 +20,6 @@
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "astro": "^4.0.6",
-    "astro-compress": "^2.2.5",
     "astro-font": "^0.0.28",
     "daisyui": "^3.2.1",
     "dayjs": "^1.11.9",
