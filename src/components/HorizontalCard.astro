@@ -8,16 +8,16 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 <div
   class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%] overflow-hidden"
 >
-  <a href={url} target={target}>
+  <a target={target}>
     <div class="hero-content flex-col md:flex-row">
       {
         img != "_blank" ? (
           <Image 
             src={img}
-            width={750}
-            height={422}
+            // width={750}
+            // height={422}
             alt={date}
-            loading = "eager"
+            // loading = "eager"
             class={"max-w-full md:max-w-[13rem] rounded-lg " + (empty ? "hidden md:flex" : "")}
           />
         ) : <></>       
@@ -29,7 +29,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
             {date != "_blank" ? <h2 class="grid place-content-center font-extralight opacity-90">{date}</h2> : <></>}
           </div>    
           <div class="grid place-content-center">
-            {badge && <div class="badge badge-secondary rounded-md shadow-xl text-md mx-2 h-fit">{badge}</div>}
+            {badge && <div class="badge badge-ghost rounded-md shadow-xl text-md mx-2 h-fit">{badge}</div>}
           </div>
           
         </div>
@@ -50,7 +50,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
           {
             tags &&
               tags.map((tag) => (
-                <a href={`${tag_url}/${tag}`} class="badge badge-outline">
+                <a href={`${tag_url}/${tag}`} class="badge badge-ghost">
                   {tag}
                 </a>
               ))

@@ -57,313 +57,186 @@ import odLogo from "../_image/od.png";
 import tLogo from "../_image/trello.png";
 import wLogo from "../_image/windows.png";
 import mdbLogo from "../_image/mdb.svg";
-import { ViewTransitions, slide } from 'astro:transitions';
+import SkillPic from "../components/SkillPic.astro";
 
+type IconData = {
+  name: String;
+  logo: ImageMetadata;
+};
+const langList: IconData[] = [
+  { name: "Python", logo: pyLogo },
+  { name: "JavaScript", logo: jsLogo },
+  { name: "TypeScript", logo: tsLogo },
+  { name: "C", logo: cLogo },
+  { name: "Golang", logo: goLogo },
+  { name: "Java", logo: jLogo },
+  { name: "HTML 5", logo: hLogo },
+  { name: "CSS", logo: cssLogo },
+  { name: "SQL", logo: sLogo },
+  { name: "PowerShell", logo: bLogo },
+  { name: "MIPS Assembly", logo: assLogo },
+];
 ---
- 
 
 <BaseLayout sideBarActiveItemID="home">
-  <head>
-    <ViewTransitions animation={slide({duration:"2.0s"})}/>
-   </head>
-  <div class="w-full">
-    <div class="text-xl  ">Hello 👋</div>
-    <div class="text-5xl font-bold">I'm Christopher Januario</div>
-    <div class="text-3xl py-3 font-bold">
-      Software Engineer and Mathematician
+  <div class="text-lg grid">
+    <div class="pl-8 pb-2">Hello 👋</div>
+    <div class="">I'm <b class="text-4xl text-center md:text-5xl"> Christopher Januario</b></div>
+    <b class="text-xl pl-8 pb-4">Software Engineer and Mathematician</b>
+    <div class="flex gap-1 pl-8 pb-16">
+      Welcome to my <b> Blazingly Fast🔥</b>portfolio.
     </div>
-    <div class="py-2 grid">
-      <text class="text-lg">
-        Welcome to my <b>Blazingly Fast🔥</b> portfolio.
-      </text>
-    </div>
-    <div class="grid grid-cols-2 gap-2">
-      <a
-        href="/ChrisResume24Q1.pdf"
-        target="_blank"
-        class="btn btn-outline "
-      >
-        View Résumé
-      </a>
-      <a
-        href="https://home.cjanua.xyz"
-        target="_blank"
-        class="btn btn-outline "
-      >
-        Projects
-      </a>
-      <a class="btn col-span-2" href="https://www.linkedin.com/in/christopher-januario/" target="_blank">
-        Let's connect</a
-      >
-    </div>
-    
+  </div>
+  <div class="grid grid-cols-4 gap-x-8 gap-y-2 pb-12 lg:px-32">
+    <a href="/ChrisResume24Q1.pdf" target="_blank" class="btn btn-outline col-span-2">
+      View Résumé
+    </a>
+    <a href="https://home.cjanua.xyz" target="_blank" class="btn btn-outline col-span-2">
+      Projects
+    </a>
+    <a />
+    <a
+      class="btn col-span-2 "
+      href="https://www.linkedin.com/in/christopher-januario/"
+      target="_blank"
+    >
+      Let's connect</a
+    >
   </div>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">Education 🏫</div>
+  <div class="text-3xl w-full font-bold mb-2">Education 🏫</div>
+  <div class="md:px-8">
+    <HorizontalCard
+      title="Bachelor of Science"
+      date="University of Central Florida"
+      badge="2022-2026 (expected)"
+      img={ucfImg}
+      desc={["Major: Mathematics and Computer Science", "Minor: Physics"]}
+      url="#"
+      bullet={false}
+    />
   </div>
+  <div class="text-3xl w-full pt-6 font-bold mb-2">Experience 💪🧑‍💼</div>
+  <div class="md:px-8">
+    <HorizontalCard
+      title="Full-Stack Developer"
+      date="SCI Solutions, LLC"
+      img={fullstackicon}
+      desc={[
+        "Converted legacy PHP website to React with TypeScript",
+        "Created CRUD API using Express in Next.js App Router to manage production DB",
+        "Designed and styled components using Radix-UI and TailwindCSS",
+        "Working in Trello using Agile SCRUM methodology",
+      ]}
+      url="#"
+      badge="08/2023-Present"
+    />
+    <div class="divider my-0" />
+    <HorizontalCard
+      title="Shift Manager"
+      date="Wendy's (Orlando, FL)"
+      img={wendysLogo}
+      desc={[
+        "Received ServSafe Certification, responsible for health of customers",
+        "Managed Inventory and Waste by logging and creating sales forecasts",
+        "Responsible for all store-related problems: technological, mechanical, and social",
+      ]}
+      url="#"
+      badge="08/2022-12/2022"
+    />
+    <HorizontalCard
+      title="Team Trainer"
+      date="Wendy's (Weston, FL)"
+      img={emptyImg}
+      empty={true}
+      desc={[
+        "Responsible for correctly processing orders, money, and speed of service",
+        "Implemented weekly systems for sanitation and inventory. Delegated tasks to crew",
+      ]}
+      badge="02/2022-08/2022"
+      url="#"
+    />
 
-  <HorizontalCard
-    title="Bachelor of Science"
-    date="University of Central Florida"
-    badge="2022 - 2026 (expected)"
-    img={ucfImg}
-    desc={["Major: Mathematics and Computer Science", "Minor: Physics"]}
-    url="#"
-    bullet={false}
-  />
-
-  <div>
-    <div class="text-3xl w-full pt-6 font-bold mb-2">Experience 💪🧑‍💼</div>
+    <div class="divider my-0" />
+    <HorizontalCard
+      title="Substitute Music Teacher"
+      date="ASM Music Schools"
+      img={asmImg}
+      desc={[
+        "Taught for Eloy Oliveros, a Cuban Latin Percussionist",
+        "Motivated and trained students K-12",
+        "Designed plans and assigned homework based on students’ progress",
+      ]}
+      url="#"
+      badge="02/2021-06/2022"
+    />
+    <div class="divider my-0" />
+    <HorizontalCard
+      title="UI/eCommerce Developer"
+      date="NanoXD International"
+      img={nanoLogo}
+      desc={[
+        "Designed User Interface and content display",
+        "Responsible for the pages of production eCommerce site",
+        "Built and styled the UI in WordPress",
+      ]}
+      url="#"
+      badge="02/2021-06/2022"
+    />
   </div>
-
-  <HorizontalCard
-    title="Full-Stack Developer"
-    date="SCI Solutions, LLC"
-    img={fullstackicon}
-    desc={[
-      "Converted legacy PHP website to React with TypeScript",
-      "Created CRUD API using Express in Next.js App Router to manage production DB",
-      "Designed and styled components using Radix-UI and TailwindCSS",
-      "Working in Trello using Agile SCRUM methodology",
-    ]}
-    url="#"
-    badge="08/2023 - Present"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Shift Manager"
-    date="Wendy's (Orlando, FL)"
-    img={wendysLogo}
-    desc={[
-      "Received ServSafe Certification, responsible for health of customers",
-      "Managed Inventory and Waste by logging and creating sales forecasts",
-      "Responsible for all store-related problems: technological, mechanical, and social",
-    ]}
-    url="#"
-    badge="08/2022 - 12/2022"
-  />
-  <HorizontalCard
-    title="Team Trainer"
-    date="Wendy's (Weston, FL)"
-    img={emptyImg}
-    empty={true}
-    desc={[
-      "Responsible for correctly processing orders, money, and speed of service",
-      "Implemented weekly systems for sanitation and inventory. Delegated tasks to crew",
-    ]}
-    badge="02/2022 - 08/2022"
-    url="#"
-  />
-
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Substitute Music Teacher"
-    date="ASM Music Schools"
-    img={asmImg}
-    desc={[
-      "Taught for Eloy Oliveros, a Cuban Latin Percussionist",
-      "Motivated and trained students K-12",
-      "Designed plans and assigned homework based on students’ progress",
-    ]}
-    url="#"
-    badge="02/2021 - 06/2022"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="UI/eCommerce Developer"
-    date="NanoXD International"
-    img={nanoLogo}
-    desc={[
-      "Designed User Interface and content display",
-      "Responsible for the pages of production eCommerce site",
-      "Built and styled the UI in WordPress",
-    ]}
-    url="#"
-    badge="02/2021 - 06/2022"
-  />
   <div>
-    <div>
-      <div class="text-3xl w-full font-bold mb-2">Technologies 💻</div>
+    <div class="text-3xl w-full font-bold mb-2">Technologies 💻</div>
+    <div class="text-2xl w-full pl-4 font-semibold pb-4">Languages</div>
+
+    <div
+      class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8"
+    >
+      {langList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
-    <div>
-      <div class="text-2xl w-full pl-4 font-semibold pb-4">Languages</div>
-    </div>
 
-    <div class="grid justify-center grid-cols-8 text-lg text-center gap-3 pl-8">
-      <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Python 3">
-          <Image
-              
-            class="  hover:scale-[110%]"
-            src={pyLogo}
-            height={100}
-            alt="Python"
-          />
-        </div>
-        
-      </div>
-      <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="JavaScript">
-          <Image
-            class="  hover:scale-[110%] rounded-2xl"
-            src={jsLogo}
-            height={100}
-            alt="JavaScript"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="TypeScript">
-          <Image
-            class="  hover:scale-[110%] rounded-2xl"
-            src={tsLogo}
-            height={100}
-            alt="TypeScript"
-          />
-        </div>
-
-      </div>
-      <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="C">
-          <Image
-            class="  hover:scale-[110%] rounded-2xl"
-            src={cLogo}
-            height={100}
-            alt="C"
-          />
-        </div>
-
-      </div>
-      <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Golang">
-          <Image
-            class="  hover:scale-[110%]"
-            src={goLogo}
-            height={100}
-            alt="Go"
-          />
-        </div>
-
-      </div>
-
-      <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Java">
-          <Image
-            class="  hover:scale-[110%]"
-            src={jLogo}
-            height={100}
-            alt="Java"
-          />
-        </div>
-
-
-      </div>
-      <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="HTML 5">
-          <Image
-              
-            class="  hover:scale-[110%]"
-            src={hLogo}
-            height={100}
-            alt="HTML"
-          />
-        </div>
-
-      </div>
-      <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="CSS">
-          <Image
-              
-            class="  hover:scale-[110%]"
-            src={cssLogo}
-            height={100}
-            alt="CSS"
-          />
-        </div>
-  
-      </div>
-      <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="SQL">
-          <Image
-              
-            class="  hover:scale-[110%]"
-            src={sLogo}
-            height={100}
-            alt="SQL"
-          />
-        </div>
-
-      </div>
-      <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="PowerShell">
-          <Image
-              
-            class="  hover:scale-[110%]"
-            src={bLogo}
-            height={100}
-            alt="Batch"
-          />
-        </div>
-      </div>
-      <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="MIPS Assembly">
-          <Image
-              
-            class="  hover:scale-[110%]"
-            src={assLogo}
-            height={100}
-            alt="MIPS"
-          />
-        </div>
-    </div>
-    </div>
-    
     <div class="divider my-0"></div>
 
-    
     <div>
       <div class="text-2xl w-full pl-4 font-semibold mb-2">Backend</div>
     </div>
-    <div class="grid justify-center grid-cols-8 text-lg text-center gap-2 pl-8">
+    <div
+      class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8"
+    >
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Node.js">
+        <div
+          class="grid justify-items-center content-center tooltip"
+          data-tip="Node.js"
+        >
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={nodeLogo}
             height={100}
             alt="Node.js"
           />
         </div>
-      </div>  
+      </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="RESTful APIs">
+        <div class="grid content-center tooltip" data-tip="RESTful APIs">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={restLogo}
             height={100}
             alt="REST"
           />
         </div>
       </div>
-      <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Express.js">
-          <Image
-              
-            class="  hover:scale-[110%]"
-            src={exLogo}
-            height={100}
-            alt="Express.js"
-          />
-        </div>
+      <div class="grid content-center tooltip" data-tip="Express.js">
+        <Image
+          class="hover:scale-[110%]"
+          src={exLogo}
+          height={100}
+          alt="Express.js"
+        />
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Fiber">
+        <div class="grid content-center tooltip" data-tip="Fiber">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={fibLogo}
             height={100}
             alt="Fiber"
@@ -371,22 +244,19 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="FastAPI">
+        <div class="grid content-center tooltip" data-tip="FastAPI">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={faLogo}
             height={100}
             alt="FastAPI"
           />
         </div>
-
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="django">
+        <div class="grid content-center tooltip" data-tip="django">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={djLogo}
             height={100}
             alt="django"
@@ -394,10 +264,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Flask">
+        <div class="grid content-center tooltip" data-tip="Flask">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={flLogo}
             height={100}
             alt="Flask"
@@ -405,10 +274,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center  tooltip" data-tip="Spring">
+        <div class="grid content-center tooltip" data-tip="Spring">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={spLogo}
             height={100}
             alt="Spring"
@@ -416,10 +284,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="PostgreSQL">
+        <div class="grid content-center tooltip" data-tip="PostgreSQL">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={pgLogo}
             height={100}
             alt="postreg"
@@ -427,10 +294,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="MySQL">
+        <div class="grid content-center tooltip" data-tip="MySQL">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={mysqlLogo}
             height={100}
             alt="MySQL"
@@ -438,10 +304,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="MongoDB">
+        <div class="grid content-center tooltip" data-tip="MongoDB">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={mdbLogo}
             height={100}
             alt="MongoDB"
@@ -449,10 +314,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="TimescaleDB">
+        <div class="grid content-center tooltip" data-tip="TimescaleDB">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={tsdbLogo}
             height={100}
             alt="timescaleDB"
@@ -460,10 +324,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="GraphQL">
+        <div class="grid content-center tooltip" data-tip="GraphQL">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={gqlLogo}
             height={100}
             alt="GraphQL"
@@ -471,10 +334,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class=" grid content-center tooltip" data-tip="Prisma">
+        <div class="grid content-center tooltip" data-tip="Prisma">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={pLogo}
             height={100}
             alt="Prisma"
@@ -486,14 +348,13 @@ import { ViewTransitions, slide } from 'astro:transitions';
     <div class="divider my-0"></div>
 
     <div>
-      <div class="text-2xl w-full pl-4   font-semibold mb-2">Frontend</div>
+      <div class="text-2xl w-full pl-4 font-semibold mb-2">Frontend</div>
     </div>
     <div class="grid justify-center grid-cols-8 text-lg text-center gap-2 pl-8">
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="React.js">
+        <div class="grid content-center tooltip" data-tip="React.js">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={reactLogo}
             height={100}
             alt="React"
@@ -501,10 +362,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="HTMX">
+        <div class="grid content-center tooltip" data-tip="HTMX">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={hxLogo}
             height={100}
             alt="HTMX"
@@ -512,10 +372,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Next.js">
+        <div class="grid content-center tooltip" data-tip="Next.js">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={nLogo}
             height={100}
             alt="Next.js"
@@ -523,10 +382,12 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center align-middle tooltip" data-tip="Tailwind CSS">
+        <div
+          class="grid content-center align-middle tooltip"
+          data-tip="Tailwind CSS"
+        >
           <Image
-              
-            class=" content-center hover:scale-[110%]"
+            class="content-center hover:scale-[110%]"
             src={twLogo}
             height={100}
             alt="TailWind"
@@ -534,20 +395,19 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Bootstrap">
+        <div class="grid content-center tooltip" data-tip="Bootstrap">
           <Image
-            class="  hover:scale-[110%] rounded-2xl"
+            class="hover:scale-[110%] rounded-2xl"
             src={bsLogo}
             height={100}
             alt="Bootstrap"
           />
         </div>
-
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="shadcn/ui">
+        <div class="grid content-center tooltip" data-tip="shadcn/ui">
           <Image
-            class="  hover:scale-[110%] rounded-2xl"
+            class="hover:scale-[110%] rounded-2xl"
             src={shadcnLogo}
             height={100}
             alt="shadcn"
@@ -555,9 +415,12 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Tanstack React Table">
+        <div
+          class="grid content-center tooltip"
+          data-tip="Tanstack React Table"
+        >
           <Image
-            class="  hover:scale-[110%] rounded-2xl"
+            class="hover:scale-[110%] rounded-2xl"
             src={tanLogo}
             height={100}
             alt="TanStack"
@@ -565,18 +428,19 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
     </div>
-  
-    
+
     <div class="divider my-0"></div>
     <div>
-      <div class="text-2xl w-full pl-4   font-semibold mb-2">Tech</div>
+      <div class="text-2xl w-full pl-4 font-semibold mb-2">Tech</div>
     </div>
     <div class="grid justify-center grid-cols-8 text-lg text-center gap-2 pl-8">
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Windows Vista/7/8/10/11">
+        <div
+          class="grid content-center tooltip"
+          data-tip="Windows Vista/7/8/10/11"
+        >
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={wLogo}
             height={100}
             alt="Windows"
@@ -584,22 +448,22 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Linux">
+        <div class="grid content-center tooltip" data-tip="Linux">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={linuxLogo}
             height={100}
             alt="Linux"
           />
         </div>
-
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Oracle VM VirtualBox">
+        <div
+          class="grid content-center tooltip"
+          data-tip="Oracle VM VirtualBox"
+        >
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={vLogo}
             height={100}
             alt="VMWare"
@@ -607,10 +471,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Docker">
+        <div class="grid content-center tooltip" data-tip="Docker">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={dockLogo}
             height={100}
             alt="Docker"
@@ -618,10 +481,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Git/Github">
+        <div class="grid content-center tooltip" data-tip="Git/Github">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={gitLogo}
             height={100}
             alt="Git"
@@ -629,10 +491,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Postman">
+        <div class="grid content-center tooltip" data-tip="Postman">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={pmLogo}
             height={100}
             alt="Postman"
@@ -640,10 +501,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="AWS">
+        <div class="grid content-center tooltip" data-tip="AWS">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={awsLogo}
             height={100}
             alt="AWS"
@@ -651,10 +511,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Vercel">
+        <div class="grid content-center tooltip" data-tip="Vercel">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={vercLogo}
             height={100}
             alt="Vercel"
@@ -662,9 +521,8 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="  grid content-center tooltip" data-tip="Trello">
+        <div class="grid content-center tooltip" data-tip="Trello">
           <Image
-           
             class="hover:scale-[110%]"
             src={tLogo}
             height={100}
@@ -675,16 +533,13 @@ import { ViewTransitions, slide } from 'astro:transitions';
     </div>
     <div class="divider my-0"></div>
     <div>
-      <div class="text-2xl w-full pl-4   font-semibold mb-2">
-        Microsoft 365
-      </div>
+      <div class="text-2xl w-full pl-4 font-semibold mb-2">Microsoft 365</div>
     </div>
     <div class="grid justify-center grid-cols-8 text-lg text-center gap-2 pl-8">
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Excel">
+        <div class="grid content-center tooltip" data-tip="Excel">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={excelLogo}
             height={100}
             alt="Excel"
@@ -692,10 +547,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Access">
+        <div class="grid content-center tooltip" data-tip="Access">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={accLogo}
             height={100}
             alt="Access"
@@ -703,10 +557,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Power BI">
+        <div class="grid content-center tooltip" data-tip="Power BI">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={pbiLogo}
             height={100}
             alt="Power BI"
@@ -714,10 +567,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Word">
+        <div class="grid content-center tooltip" data-tip="Word">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={wordLogo}
             height={100}
             alt="Word"
@@ -725,10 +577,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="PowerPoint">
+        <div class="grid content-center tooltip" data-tip="PowerPoint">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={ppLogo}
             height={100}
             alt="PowerPoint"
@@ -736,10 +587,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="Outlook">
+        <div class="grid content-center tooltip" data-tip="Outlook">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={outLogo}
             height={100}
             alt="Outlook"
@@ -747,10 +597,9 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
       <div class="text-sm">
-        <div class="   grid content-center tooltip" data-tip="OneDrive">
+        <div class="grid content-center tooltip" data-tip="OneDrive">
           <Image
-              
-            class="  hover:scale-[110%]"
+            class="hover:scale-[110%]"
             src={odLogo}
             height={100}
             alt="OneDrive"
@@ -758,5 +607,5 @@ import { ViewTransitions, slide } from 'astro:transitions';
         </div>
       </div>
     </div>
-  
+  </div>
 </BaseLayout>
