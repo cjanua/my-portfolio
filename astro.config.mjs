@@ -11,6 +11,11 @@ export default defineConfig({
   site: 'https://astrofy-template.netlify.app',
   integrations: [sitemap(), tailwind(), react()],
   compressHTML: true,
-  output: "server",
-  adapter: vercel()
+  output: 'static',
+  adapter: vercel({
+    imageService: true,
+    imagesConfig: {
+      sizes: [320, 640, 1280],
+    },
+  }),
 });
