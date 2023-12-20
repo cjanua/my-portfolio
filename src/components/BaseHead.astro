@@ -4,7 +4,7 @@
 import { ViewTransitions } from 'astro:transitions';
 import '../styles/global.css';
 import fav from '/favicon.png'
-
+import myBanner from "../_image/banner.jpg";
 export interface Props {
 	title: string;
 	description: string;
@@ -25,12 +25,12 @@ const { title, description, } = Astro.props;
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
-<!-- Open Graph / Facebook
+<!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} /> -->
-<!-- <meta property="og:image" content={new URL(image, Astro.url)} /> -->
+<meta property="og:title" content={"Chris Januario's Portfolio Website"} />
+<meta property="og:description" content={"Click me :D"} /> 
+<meta property="og:image" content={'/banner.jpg'} />
 
 <!-- Twitter -->
 <!-- <meta property="twitter:card" content="summary_large_image" />
