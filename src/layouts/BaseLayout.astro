@@ -11,7 +11,7 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="sm:overflow-x-hidden">
 
   <head>
     <BaseHead title={title} description={description} image={image} />
@@ -23,7 +23,7 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
       <div class="drawer-content bg-base-100">
         <Header title={SITE_TITLE} />
         <div class="flex justify-center " transition:animate={slide()} >      
-          <main class="p-4 lg:px-24" >   
+          <main class="p-4 lg:px-24 " >   
             
             <slot />
           </main>
