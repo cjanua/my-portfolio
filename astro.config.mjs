@@ -8,7 +8,7 @@ import vercel from '@astrojs/vercel/static';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astrofy-template.netlify.app',
+  site: 'https://www.cjanua.xyz',
   integrations: [sitemap(), tailwind(), react()],
   compressHTML: true,
   output: 'static',
