@@ -12,8 +12,8 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
     <div class="hero-content flex-col md:flex-row">
       {
         img != "_blank" ? (
-          <Image 
-            src={img}
+          <img 
+          src={`data:image/png;base64, ${img}`}
             // width={750}
             // height={422}
             alt={date}

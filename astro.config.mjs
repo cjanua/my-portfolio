@@ -12,7 +12,4 @@ export default defineConfig({
   integrations: [sitemap(), tailwind(), react()],
   compressHTML: true,
   output: 'static',
-  adapter: vercel({
-    imageService: true,
-  }),
 });

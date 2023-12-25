@@ -2,68 +2,15 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 
-import ucfImg from "../_image/UCF.webp";
-import fullstackicon from "../_image/test2.png";
-import wendysLogo from "../_image/Wendys-Logo.png";
-import emptyImg from "../_image/empty.webp";
-import asmImg from "../_image/asmImg.jpeg";
-import nanoLogo from "../_image/nanoxd.webp";
-import linuxLogo from "../_image/linux.png";
-import reactLogo from "../_image/React-icon.svg.png";
-import pyLogo from "../_image/python.png";
-import jsLogo from "../_image/JavaScript-logo.png";
-import tsLogo from "../_image/TS.svg";
-import goLogo from "../_image/golang.png";
-import cLogo from "../_image/C_Logo.png";
-import jLogo from "../_image/Java.png";
-import sLogo from "../_image/SQL.png";
-import bLogo from "../_image/shell.png";
-import vLogo from "../_image/VMBox.png";
-import hLogo from "../_image/html.png";
-import cssLogo from "../_image/css.png";
-import nLogo from "../_image/nextjs.svg";
-import nodeLogo from "../_image/node.png";
-import fibLogo from "../_image/gofiber.png";
-import twLogo from "../_image/twc.png";
-import shadcnLogo from "../_image/shadcn.png";
-import tanLogo from "../_image/tanstack.png";
-import exLogo from "../_image/express.png";
-import assLogo from "../_image/assembly.png";
-import faLogo from "../_image/fa.svg";
-import djLogo from "../_image/dj.png";
-import flLogo from "../_image/flask.png";
-import spLogo from "../_image/Spring.png";
-import hxLogo from "../_image/htmx.png";
-import restLogo from "../_image/REST.webp";
-import pgLogo from "../_image/ps.png";
-import mysqlLogo from "../_image/mysql.png";
-import tsdbLogo from "../_image/tsdb.png";
-import pLogo from "../_image/prisma.png";
-import gqlLogo from "../_image/gql.png";
-import bsLogo from "../_image/bs.png";
-import dockLogo from "../_image/docker.png";
-import gitLogo from "../_image/git.png";
-import pmLogo from "../_image/postman.svg";
-import vercLogo from "../_image/v.svg";
-import awsLogo from "../_image/aws.webp";
-import excelLogo from "../_image/excel.png";
-import accLogo from "../_image/access.png";
-import wordLogo from "../_image/word.png";
-import outLogo from "../_image/outlook.png";
-import ppLogo from "../_image/pp.png";
-import pbiLogo from "../_image/pbi.png";
-import odLogo from "../_image/od.png";
-import tLogo from "../_image/trello.png";
-import wLogo from "../_image/windows.png";
-import mdbLogo from "../_image/mdb.svg";
 import SkillPic from "../components/SkillPic.astro";
-
+import {pyLogo, jsLogo, exLogo, djLogo, faLogo, flLogo, bsLogo, dockLogo, awsLogo, hLogo, cssLogo, fibLogo, gqlLogo, gitLogo, linuxLogo, hxLogo, nLogo, excelLogo, accLogo, pbiLogo, ppLogo, outLogo, odLogo, mysqlLogo, mdbLogo, assLogo, cLogo, goLogo, jLogo, pgLogo, powLogo, reactLogo, spLogo, sLogo, tanLogo, shadcnLogo, tLogo, tsdbLogo, pLogo, twLogo, vLogo, vercLogo, pmLogo, wordLogo, wLogo, nodeLogo, restLogo, tsLogo,
+wendysLogo, ucfImg, nanoLogo, asmImg, emptyImg, fullstackicon }from "../components/Images"
 type IconData = {
   name: String;
-  logo: ImageMetadata;
+  logo: ImageMetadata | string;
 };
 const langList: IconData[] = [
-  { name: "Python", logo: pyLogo },
+  { name: "Python", logo:  pyLogo },
   { name: "JavaScript", logo: jsLogo },
   { name: "TypeScript", logo: tsLogo },
   { name: "C", logo: cLogo },
@@ -72,7 +19,7 @@ const langList: IconData[] = [
   { name: "HTML 5", logo: hLogo },
   { name: "CSS", logo: cssLogo },
   { name: "SQL", logo: sLogo },
-  { name: "PowerShell", logo: bLogo },
+  { name: "PowerShell", logo: powLogo },
   { name: "MIPS Assembly", logo: assLogo },
 ];
 
