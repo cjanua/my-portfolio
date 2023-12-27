@@ -4,7 +4,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
 
 import SkillPic from "../components/SkillPic.astro";
 import {pyLogo, jsLogo, exLogo, djLogo, faLogo, flLogo, bsLogo, dockLogo, awsLogo, hLogo, cssLogo, fibLogo, gqlLogo, gitLogo, linuxLogo, hxLogo, nLogo, excelLogo, accLogo, pbiLogo, ppLogo, outLogo, odLogo, mysqlLogo, mdbLogo, assLogo, cLogo, goLogo, jLogo, pgLogo, powLogo, reactLogo, spLogo, sLogo, tanLogo, shadcnLogo, tLogo, tsdbLogo, pLogo, twLogo, vLogo, vercLogo, pmLogo, wordLogo, wLogo, nodeLogo, restLogo, tsLogo,
-wendysLogo, ucfImg, nanoLogo, asmImg, emptyImg, fullstackicon }from "../components/Images"
+wendysLogo, ucfImg, nanoLogo, asmImg, emptyImg, fullstackicon, cypressLogo, oauthLogo, authLogo, gdbLogo, vscodeLogo, nvimLogo, threejsLogo }from "../components/Images"
 type IconData = {
   name: String;
   logo: ImageMetadata | string;
@@ -46,6 +46,9 @@ const frontList: IconData[] = [
   { name: "Tailwind CSS", logo: twLogo },
   { name: "Bootstrap", logo:bsLogo },
   { name: "shadcn/ui", logo: shadcnLogo },
+  { name: "Three.js", logo:threejsLogo },
+  { name: "OAuth 2.0", logo: oauthLogo },
+  { name: "Auth.js", logo: authLogo },
   { name: "Tanstack React Table", logo: tanLogo },
 ]
 const techList: IconData[] = [
@@ -58,6 +61,9 @@ const techList: IconData[] = [
   { name: "AWS", logo: awsLogo },
   { name: "Vercel", logo: vercLogo },
   { name: "Trello", logo: tLogo },
+  { name: "GDB: GNU Debugger", logo: gdbLogo },
+  { name: "VS Code", logo: vscodeLogo },
+  { name: "NeoVim", logo: nvimLogo },
 ]
 const mcList: IconData[] = [
   { name: "Excel", logo: excelLogo },
@@ -106,9 +112,18 @@ const mcList: IconData[] = [
     <HorizontalCard
       title="Bachelor of Science"
       date="University of Central Florida"
-      badge="2022-2026 (expected)"
+      badge="2022-2026"
       img={ucfImg}
       desc={["Major: Mathematics and Computer Science", "Minor: Physics"]}
+      url="#"
+      bullet={false}
+    />
+    <HorizontalCard
+      title="High School"
+      date="Cypress Bay HS"
+      badge="2018-2022"
+      img={cypressLogo}
+      desc={["3.37/4.0 core GPA", "AP Scholar with Distinction", "Cambridge Advanced International Certificate of Education Diploma Recipient (2021)", "Computer Science Club Founding Member (2021)", "Principal Bassonist for Wind Ensemble (all 4 years)"]}
       url="#"
       bullet={false}
     />
@@ -182,11 +197,15 @@ const mcList: IconData[] = [
     />
   </div>
   <div>
-    <div class="text-3xl w-full font-bold pb-2">Technologies 💻</div>
+    <div class="w-fit pb-2 grid md:grid-flow-col md:gap-8 content-end ">
+      <div class="text-3xl font-bold grid content-end">Technologies 💻</div>
+      <p class ="grid content-end">Software used in projects/coursework</p>
+    </div>
+    
     <div class="text-2xl w-full pl-8 font-semibold pb-1">Languages</div>
     
     <div
-      class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
+      class="grid justify-center grid-cols-12 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
     >
       {langList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
@@ -195,7 +214,7 @@ const mcList: IconData[] = [
 
     <div class="text-2xl w-full pl-8 font-semibold">Backend</div>
     <div
-      class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
+      class="grid justify-center grid-cols-12 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
     >
       {backList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
@@ -205,7 +224,7 @@ const mcList: IconData[] = [
 
     <div class="text-2xl w-full pl-8 font-semibold">Frontend</div>
     <div
-      class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
+      class="grid justify-center grid-cols-12 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
     >
       {frontList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
@@ -214,7 +233,7 @@ const mcList: IconData[] = [
     <div class="divider my-0" />
     <div class="text-2xl w-full pl-8 font-semibold">Tech</div>
     <div
-      class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
+      class="grid justify-center grid-cols-12 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
     >
       {techList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
@@ -222,7 +241,7 @@ const mcList: IconData[] = [
     <div class="divider my-0" />
     <div class="text-2xl w-full pl-8 font-semibold ">Microsoft 365</div>
     <div
-      class="grid justify-center grid-cols-8 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
+      class="grid justify-center grid-cols-12 text-lg text-center gap-1 lg:gap-3 pl-8 py-4"
     >
       {mcList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
