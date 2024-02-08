@@ -3,11 +3,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 
 import SkillPic from "../components/SkillPic.astro";
-import {pyLogo, jsLogo, exLogo, djLogo, faLogo, flLogo, bsLogo, dockLogo, awsLogo, hLogo, cssLogo, fibLogo, gqlLogo, gitLogo, linuxLogo, hxLogo, nLogo, excelLogo, accLogo, pbiLogo, ppLogo, outLogo, odLogo, mysqlLogo, mdbLogo, assLogo, cLogo, goLogo, jLogo, pgLogo, powLogo, reactLogo, spLogo, sLogo, tanLogo, shadcnLogo, tLogo, tsdbLogo, pLogo, twLogo, vLogo, vercLogo, pmLogo, wordLogo, wLogo, nodeLogo, restLogo, tsLogo,
+import {bash_icon, pyLogo, jsLogo, exLogo, djLogo, faLogo, flLogo, bsLogo, dockLogo, awsLogo, hLogo, cssLogo, fibLogo, gqlLogo, gitLogo, linuxLogo, hxLogo, nLogo, excelLogo, accLogo, pbiLogo, ppLogo, outLogo, odLogo, mysqlLogo, mdbLogo, assLogo, cLogo, goLogo, jLogo, pgLogo, powLogo, reactLogo, spLogo, sLogo, tanLogo, shadcnLogo, tLogo, tsdbLogo, pLogo, twLogo, vLogo, vercLogo, pmLogo, wordLogo, wLogo, nodeLogo, restLogo, tsLogo,
 wendysLogo, ucfImg, nanoLogo, asmImg, emptyImg, fullstackicon, cypressLogo, oauthLogo, authLogo, gdbLogo, vscodeLogo, nvimLogo, threejsLogo, astroLogo }from "../components/Images"
 type IconData = {
   name: String;
   logo: ImageMetadata | string;
+  invertOnDark?: boolean;
 };
 const langList: IconData[] = [
   { name: "Python", logo:  pyLogo },
@@ -18,9 +19,10 @@ const langList: IconData[] = [
   { name: "Java", logo: jLogo },
   { name: "HTML 5", logo: hLogo },
   { name: "CSS", logo: cssLogo },
-  { name: "SQL", logo: sLogo },
+  { name: "SQL", logo: sLogo, invertOnDark: true },
   { name: "PowerShell", logo: powLogo },
-  { name: "MIPS Assembly", logo: assLogo },
+  { name: "Bash", logo: bash_icon, invertOnDark: true},
+  // { name: "MIPS Assembly", logo: assLogo },
 ];
 
 const backList: IconData[] = [
@@ -45,7 +47,7 @@ const frontList: IconData[] = [
   { name: "Next.js", logo:nLogo },
   { name: "Astro", logo:astroLogo},
   { name: "Tailwind CSS", logo: twLogo },
-  { name: "Bootstrap", logo:bsLogo },
+  // { name: "Bootstrap", logo:bsLogo },
   { name: "shadcn/ui", logo: shadcnLogo },
   { name: "Three.js", logo:threejsLogo },
   { name: "OAuth 2.0", logo: oauthLogo },
@@ -206,18 +208,18 @@ const mcList: IconData[] = [
     <div class="text-2xl w-full pl-8 font-semibold pb-1">Languages</div>
     
     <div
-      class="grid justify-center grid-cols-12 text-lg text-center gap-2 lg:gap-3 pl-8 py-4"
+      class="grid justify-center grid-cols-12 text-lg text-center gap-2 md:gap-0 lg:gap-8  lg:gap-3 pl-8 py-4"
     >
-      {langList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
+      {langList.map((i: IconData) => <div class={`${i.invertOnDark? "dark:invert" : ""}`}><SkillPic name={i.name} logo={i.logo}/></div>)}
     </div>
 
     <div class="divider my-0" />
 
     <div class="text-2xl w-full pl-8 font-semibold">Backend</div>
     <div
-      class="grid justify-center grid-cols-12 text-lg text-center gap-2 lg:gap-3 pl-8 py-4"
+      class="grid justify-center grid-cols-12 text-lg text-center gap-2 md:gap-0 lg:gap-8  lg:gap-3 pl-8 py-4"
     >
-      {backList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
+      {backList.map((i: IconData) => <div class={`${i.invertOnDark? "dark:invert" : ""}`}><SkillPic name={i.name} logo={i.logo} /></div>)}
     </div>
 
     <div class="divider my-0" />
@@ -225,7 +227,7 @@ const mcList: IconData[] = [
 
     <div class="text-2xl w-full pl-8 font-semibold">Frontend</div>
     <div
-      class="grid justify-center grid-cols-12 text-lg text-center gap-2 lg:gap-3 pl-8 py-4"
+      class="grid justify-center grid-cols-12 text-lg text-center gap-2 md:gap-0 lg:gap-8  lg:gap-3 pl-8 py-4"
     >
       {frontList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
@@ -234,7 +236,7 @@ const mcList: IconData[] = [
     <div class="divider my-0" />
     <div class="text-2xl w-full pl-8 font-semibold">Tech</div>
     <div
-      class="grid justify-center grid-cols-12 text-lg text-center gap-2 lg:gap-3 pl-8 py-4"
+      class="grid justify-center grid-cols-12 text-lg text-center gap-2 md:gap-0 lg:gap-8  lg:gap-3 pl-8 py-4"
     >
       {techList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>
@@ -242,7 +244,7 @@ const mcList: IconData[] = [
     <div class="divider my-0" />
     <div class="text-2xl w-full pl-8 font-semibold ">Microsoft 365</div>
     <div
-      class="grid justify-center grid-cols-12 text-lg text-center gap-2 lg:gap-3 pl-8 py-4"
+      class="grid justify-center grid-cols-12 text-lg text-center gap-2 md:gap-0 lg:gap-8  lg:gap-3 pl-8 py-4"
     >
       {mcList.map((i: IconData) => <SkillPic name={i.name} logo={i.logo} />)}
     </div>

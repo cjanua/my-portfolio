@@ -23,7 +23,7 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
       <div class="drawer-content bg-base-100 overflow-x-hidden">
         <Header title={SITE_TITLE} />
         <div class="flex justify-center scale-[95%]" transition:animate={slide()} >      
-          <main class="lg:px-24 -mt-12 md:-mt-4 lg:-mt-0" >   
+          <main class="px-0 latptop:px-4 desktop:px-32 tv:px-[16rem], full-tv:px-[32rem] -mt-12 md:-mt-4 lg:-mt-0" >   
             <slot class = ""/>
           </main>
         </div>
